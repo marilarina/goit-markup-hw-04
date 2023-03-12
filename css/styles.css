@@ -30,7 +30,7 @@ img {
     padding-right: 0;
 }
 .link {
-    display: inline-block;
+    display: block;
     text-decoration: none;
 }   
 .list {    
@@ -267,8 +267,8 @@ img {
     margin-top: 72px;                                     
 }
 .card-name {
-    padding: 0;
-    margin: 32px 16px;                                                       
+    padding: 32px 16px;
+                                                         
 }
 .list-item {
     flex-basis: calc((100% - 72px)/ 4);
@@ -282,7 +282,8 @@ img {
     align-items: center;
     padding: 0;
     gap: 24px;
-    margin-top: 8px;    
+    margin-top: 8px;
+    margin-bottom: 0;
 } 
 .social-links-item-link {
     display: flex;
@@ -325,7 +326,7 @@ img {
     border: 1px solid#8e8f99;
     border-radius: 4px;
     margin: 0;
-    padding: 16px 32px;;
+   
 }
 .customers-logo-link:hover,
 .customers-logo-link:focus {
@@ -355,7 +356,8 @@ img {
     border: 1px solid var(--accent-color);
     border-top: none;
 }     
-.project-item:hover {
+.project-item > .link:hover,
+.project-item > .link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }                                         
 .project-subtitle {
@@ -399,13 +401,21 @@ img {
 .footer-container {
     display: flex;
     align-items: center;
-    gap: 120px;
 }
-.footer .item-subtitle {
+.footer-right {
+    margin-left: 120px;
+}
+.footer-right-title {
     color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
-.social-links {
+.social-links-footer {
     display: flex;
+    justify-content: space-between;
+    gap: 16px;
     margin-top: 16px;
     margin-bottom: 32px;
 }
